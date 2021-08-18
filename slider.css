@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F9D030;
+    background-color: #FB6090;
+    background-color: #FB8DA0;
+}
+.slideshow{
+    width: 65%;
+    height: 65vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    border: 20px solid white;
+    border-bottom: 20px solid #B8EE30;
+    border-top: 20px solid #B8EE30;
+    border-bottom: 20px solid #EFEBE0;
+    border-top: 20px solid #EFEBE0;
+}
+.navigation{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar{
+    width: 10px;
+    height: 10px;
+    margin: 8px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.493);
+    transition: 0.4s;
+}
+.bar:hover{
+    background-color: rgba(255, 255, 255, 0.884);
+}
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slide{
+    width: 20%;
+    height: 100%;
+    background-color: #F62AA0;
+    background-color: #FFC5D0;
+    
+    transition: 0.8s;
+    display: flex;
+}
+.slide img{
+    margin: 0px auto;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
+.slide div{
+    background-color: rgba(0, 0, 0, 0.151);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 30%;
+}
+.slide div h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    transform: translateX(-50%);
+}
